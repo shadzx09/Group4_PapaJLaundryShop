@@ -24,3 +24,4 @@ const Header = ({ toggleSidebar }) => {
 };
 
 export default Header;
+``
