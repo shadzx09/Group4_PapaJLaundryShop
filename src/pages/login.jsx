@@ -4,7 +4,6 @@ import '../styles/loginstyle.css';
 
 export default function SignUpPage() {
   const [formData, setFormData] = useState({
-    clerkUsername: '',
     name: '',
     email: '',
     password: ''
@@ -23,23 +22,26 @@ export default function SignUpPage() {
 
   return (
     <div className="login-container">
-      <div className="login-left">
+      {/* Background Bubble Effect */}
+      <div className="bubbles">
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+        <div className="bubble"></div>
+      </div>
+
+      {/* 3D Glass Card Form */}
+      <div className="login-glass-card">
+        <h1 className="shop-title-3d">Papa J's Laundry Shop</h1>
         <div className="login-form-wrapper">
           <h2 className="login-title">Welcome Back!</h2>
           <form onSubmit={handleLogin} className="login-form">
-            <div className="form-group">
-              <label htmlFor="clerkUsername">Clerk username</label>
-              <input
-                type="text"
-                id="clerkUsername"
-                name="clerkUsername"
-                placeholder="Enter clerk username..."
-                value={formData.clerkUsername}
-                onChange={handleChange}
-                className="form-input"
-                autoComplete="username"
-              />
-            </div>
 
             <div className="form-group">
               <label htmlFor="email">Email</label>
@@ -72,11 +74,6 @@ export default function SignUpPage() {
             </button>
           </form>
         </div>
-      </div>
-
-      <div className="login-right">
-        <img src="/pictures/Papa(1).png" alt="Signup" />
-    
       </div>
     </div>
   );
